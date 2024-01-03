@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://hjtqqbskvh05"]
+
+[ext_resource type="Texture2D" uid="uid://ccw2vi3tuoter" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_elk0b"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_elk0b")
+hframes = 4
+vframes = 4
+frame = 3
