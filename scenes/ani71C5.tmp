@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://iyx5w7a7dp38"]
+
+[ext_resource type="Script" path="res://scenes/animal.gd" id="1_fedod"]
+[ext_resource type="Texture2D" uid="uid://bgy656aswcw0f" path="res://assets/Characters/Free Cow Sprites.png" id="1_gm7cj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t72x"]
+atlas = ExtResource("1_gm7cj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fghsw"]
+atlas = ExtResource("1_gm7cj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke3s1"]
+atlas = ExtResource("1_gm7cj")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y3bn"]
+atlas = ExtResource("1_gm7cj")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qcrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t72x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fghsw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke3s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1y3bn")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ns8"]
+size = Vector2(27.6146, 25.9598)
+
+[node name="Animal" type="CharacterBody2D"]
+script = ExtResource("1_fedod")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1qcrl")
+animation = &"walk_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5)
+scale = Vector2(1.08562, 0.743593)
+shape = SubResource("RectangleShape2D_h6ns8")
