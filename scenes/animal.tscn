@@ -45,6 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdyp4"]
+size = Vector2(20.9077, 34.7189)
 
 [node name="Animal" type="CharacterBody2D"]
 script = ExtResource("1_g6bhf")
@@ -54,7 +55,7 @@ sprite_frames = SubResource("SpriteFrames_1qcrl")
 animation = &"walk_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 9)
+position = Vector2(1, 7)
 scale = Vector2(1.33922, 0.403238)
 shape = SubResource("RectangleShape2D_jdyp4")
 

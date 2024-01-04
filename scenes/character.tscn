@@ -122,7 +122,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -133,7 +133,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -144,7 +144,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -155,7 +155,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 4.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpfbh"]
@@ -167,8 +167,9 @@ script = ExtResource("1_w1ild")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hero2")
 animation = &"walk_up"
+frame_progress = 0.0607816
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
+position = Vector2(0, 5)
 scale = Vector2(0.72629, 0.336189)
 shape = SubResource("RectangleShape2D_tpfbh")

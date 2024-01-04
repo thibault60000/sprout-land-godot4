@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 100
+@export var speed = 100
 var player_state
 
 func _physics_process(delta):
@@ -11,7 +11,7 @@ func _physics_process(delta):
 	elif direction.x != 0 or direction.y != 0:
 		player_state = "walking"
 
-	velocity = direction * speed
+	velocity = direction.normalized() * speed
 	move_and_slide()
 
 	play_anim(direction)
@@ -29,14 +29,5 @@ func play_anim(direction):
 		if direction.x == -1:
 			$AnimatedSprite2D.play("walk_left")
 		
-		# https://www.youtube.com/watch?v=eAEe_9jCV4s
-
-		# if direction.x > 0.5 and direction.Y < -0.5:
-		#     $AnimatedSprite2D.play("walk_up_right")
-		# if direction.x > 0.5 and direction.Y > 0.5:
-		#     $AnimatedSprite2D.play("walk_down_right")
-		# if direction.x < -0.5 and direction.Y < -0.5:
-		#     $AnimatedSprite2D.play("walk_up_left")
-		# if direction.x < -0.5 and direction.Y > 0.5:
-		#     $AnimatedSprite2D.play("walk_down_left")
-		
+func player():
+	pass
