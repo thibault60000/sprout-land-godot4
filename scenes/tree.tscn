@@ -31,10 +31,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d6mce"]
-radius = 27.96
+radius = 28.0
 
 [node name="Tree" type="Node2D"]
-position = Vector2(27, 26)
 script = ExtResource("1_vy0na")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -42,15 +41,17 @@ sprite_frames = SubResource("SpriteFrames_md6kc")
 animation = &"full"
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, -9)
+scale = Vector2(0.971, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 1)
+visible = false
+position = Vector2(-1, 9)
+scale = Vector2(0.715425, 0.692714)
 shape = SubResource("CircleShape2D_d6mce")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
-
-[node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -67,13 +68,22 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.00141, 1.00587)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.690196, 0.690196, 0.690196, 1)
+theme_override_colors/font_shadow_color = Color(0.619608, 0.619608, 0.619608, 1)
 theme_override_constants/line_spacing = -5
 theme_override_font_sizes/font_size = 8
 text = "Appuyer sur E 
 pour ramasser"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MarkerApple3" type="Marker2D" parent="."]
+position = Vector2(6, -4)
+
+[node name="MarkerApple2" type="Marker2D" parent="."]
+position = Vector2(-7, -1)
+
+[node name="MarkerApple1" type="Marker2D" parent="."]
+position = Vector2(3, 6)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
