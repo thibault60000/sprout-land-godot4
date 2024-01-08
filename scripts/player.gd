@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var speed = 100
+@export var inventory: Inventory
+
 var player_state
 
 func _physics_process(delta):

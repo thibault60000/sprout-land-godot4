@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://hjtqqbskvh05"]
+[gd_scene load_steps=22 format=3 uid="uid://hjtqqbskvh05"]
 
 [ext_resource type="Texture2D" uid="uid://ccw2vi3tuoter" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_elk0b"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_w1ild"]
+[ext_resource type="PackedScene" uid="uid://ctx6lhq6mg2nu" path="res://inventory/inventory_ui.tscn" id="3_xg5u3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2hhu"]
 atlas = ExtResource("1_elk0b")
@@ -173,3 +174,9 @@ frame_progress = 0.0607816
 position = Vector2(0, 5)
 scale = Vector2(0.72629, 0.336189)
 shape = SubResource("RectangleShape2D_tpfbh")
+
+[node name="Inventory_UI" parent="." instance=ExtResource("3_xg5u3")]
+offset_left = -48.0
+offset_top = -75.0
+offset_right = 41.0
+offset_bottom = -9.0
